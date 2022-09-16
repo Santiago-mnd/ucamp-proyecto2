@@ -1,10 +1,11 @@
-// Tenemos mayor legibilidad usando esta función =>
+// Uso esta función para mayor legibilidad, pero no afecta nada más. =>
 const $ = (selector) => document.querySelector(selector);
 
 const mainForm = $('#mainForm');
 const todosList = $('#todoList');
 const completedTodosList = $('#completedTodosList');
 const completedTodosListContainer = $('#completedTodosListContainer');
+const completedTodosTitle = $('#completedTodosTitle');
 let todosArray = [];
 
 // Functions
@@ -129,6 +130,12 @@ const printCompletedTodos = () => {
   completedTodosArray = JSON.parse(localStorage.getItem('todos'));
   if (completedTodosArray === null) completedTodosArray = [];
   completedTodosArray = completedTodosArray.filter((item) => item.isCompleted);
+  console.log(completedTodosArray);
+  if (completedTodosArray.length === 0) {
+    completedTodosListContainer.classList.add('hidden');
+  } else {
+    completedTodosListContainer.classList.remove('hidden');
+  }
   completedTodosList.innerHTML = '';
   completedTodosArray.forEach((item, index) => {
     const isEven = index % 2 === 0;
