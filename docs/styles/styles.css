@@ -573,12 +573,12 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mb-4 {
@@ -715,14 +715,14 @@ video {
   line-height: 2.5rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -776,35 +776,6 @@ video {
 
 .placeholder\:opacity-50::placeholder {
   opacity: 0.5;
-}
-
-.placeholder\:transition-transform::-moz-placeholder {
-  -moz-transition-property: transform;
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.placeholder\:transition-transform::placeholder {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.placeholder\:duration-300::-moz-placeholder {
-  transition-duration: 300ms;
-}
-
-.placeholder\:duration-300::placeholder {
-  transition-duration: 300ms;
-}
-
-.placeholder\:ease-in-out::-moz-placeholder {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.placeholder\:ease-in-out::placeholder {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover\:bg-amber-200:hover {
