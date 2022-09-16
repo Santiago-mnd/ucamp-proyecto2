@@ -5,18 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Typical</title>
+    <script src="./scripts/index.js" defer></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles/styles.css" />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&family=Josefin+Sans:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <!-- Material Icons -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <!-- ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      defer
+    ></script>
   </head>
-  <body></body>
+  <body class="bg-fuchsia-200 font-heebo">
+    <header class="w-full flex items-center justify-center bg-fuchsia-900">
+      <h1 class="font-bold text-4xl font-roboto p-4 text-amber-200">Typical</h1>
+    </header>
+    <main
+      class="h-screen p-12 mx-auto text-fuchsia-900 w-11/12 md:w-4/5 xl:w-3/5"
+    >
+      <!-- <label for="search">
+        <input
+          name="search"
+          type="text"
+          id="search"
+          class="w-full font-heebo text-sm text-center border-2 border-fuchsia-900 rounded-md p-2 mt-4 focus:border-amber-200 focus:outline-none placeholder-fuchsia-900"
+          placeholder="Añadir tarea"
+        />
+      </label> -->
+      <h2 class="text-2xl font-bold text-center mt-6">¿Qué harás hoy?</h2>
+      <form action="" id="mainForm">
+        <label for="newTask">
+          <!-- Hacer el palceholder dinámico -->
+          <input
+            name="newTask"
+            type="text"
+            id="newTask"
+            class="w-full bg-fuchsia-100 font-heebo text-sm text-fuchsia-900 text-center border-2 border-fuchsia-900 rounded-md p-2 mt-4 focus:border-amber-200 focus:outline-none placeholder-fuchsia-900 placeholder:opacity-50"
+            placeholder="Apagar los frijoles"
+            required
+          />
+        </label>
+        <button
+          type="submit"
+          class="block mx-auto text-amber-200 px-4 py-2 rounded-md bg-fuchsia-900 mt-4 font-heebo transition-colors duration-300 ease-out hover:bg-amber-200 hover:text-fuchsia-900"
+        >
+          Añadir
+        </button>
+      </form>
+      <section class="mt-6">
+        <ul id="todoList">
+          <li
+            class="w-full flex flex-col md:flex-row items-center justify-between bg-fuchsia-100 p-2 rounded-md"
+          >
+            <p
+              class="text-sm font-bold whitespace-pre-line text-center mb-4 md:mb-0 md:text-left md:whitespace-normal"
+            >
+              Apagar los frijoles
+            </p>
+            <div class="flex items-center md:justify-end md:w-1/3 gap-2">
+              <button
+                class="text-amber-200 flex items-center justify-center bg-fuchsia-900 rounded-md px-2 py-1"
+              >
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </button>
+              <button
+                class="text-amber-200 flex items-center justify-center bg-fuchsia-900 rounded-md px-2 py-1"
+              >
+                <ion-icon name="pencil-outline"></ion-icon>
+              </button>
+              <button
+                class="text-amber-200 flex items-center justify-center bg-fuchsia-900 rounded-md px-2 py-1"
+                aria-label="Eliminar tarea"
+              >
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="bg-fuchsia-900 p-4">
+      <p class="text-center text-amber-200 font-roboto font-bold text-2xl">
+        Hecho con ❤️ por
+        <span class="text-amber-200 font-roboto font-bold text-2xl">
+          Typical
+        </span>
+      </p>
+    </footer>
+  </body>
 </html>
