@@ -27,6 +27,9 @@ const printTodos = () => {
   todosList.innerHTML = '';
   todosArray.forEach((item, index) => {
     const isEven = index % 2 === 0;
+    const isButtonEven = isEven
+      ? 'bg-fuchsia-900'
+      : 'bg-amber-200 text-fuchsia-900';
     const li = document.createElement('li');
     li.innerHTML = `
     <p
@@ -36,17 +39,17 @@ const printTodos = () => {
     </p>
     <div class="flex items-center md:justify-end md:w-1/3 gap-2">
       <button
-        class="text-amber-200 flex items-center justify-center bg-fuchsia-900 rounded-md px-2 py-1"
+        class="text-amber-200 flex items-center justify-center ${isButtonEven} rounded-md px-2 py-1"
       >
         <ion-icon name="checkmark-done-outline"></ion-icon>
       </button>
       <button
-        class="text-amber-200 flex items-center justify-center bg-fuchsia-900 rounded-md px-2 py-1"
+        class="text-amber-200 flex items-center justify-center ${isButtonEven} rounded-md px-2 py-1"
       >
         <ion-icon name="pencil-outline"></ion-icon>
       </button>
       <button
-        class="text-amber-200 flex items-center justify-center bg-fuchsia-900 rounded-md px-2 py-1"
+        class="text-amber-200 flex items-center justify-center ${isButtonEven} rounded-md px-2 py-1"
         aria-label="Eliminar tarea"
       >
         <ion-icon name="trash-outline"></ion-icon>
