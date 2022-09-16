@@ -778,6 +778,35 @@ video {
   opacity: 0.5;
 }
 
+.placeholder\:transition-transform::-moz-placeholder {
+  -moz-transition-property: transform;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.placeholder\:transition-transform::placeholder {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.placeholder\:duration-300::-moz-placeholder {
+  transition-duration: 300ms;
+}
+
+.placeholder\:duration-300::placeholder {
+  transition-duration: 300ms;
+}
+
+.placeholder\:ease-in-out::-moz-placeholder {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.placeholder\:ease-in-out::placeholder {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .hover\:bg-amber-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(253 230 138 / var(--tw-bg-opacity));
