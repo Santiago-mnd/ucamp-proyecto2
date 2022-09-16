@@ -59,6 +59,7 @@
         <button
           type="submit"
           class="block mx-auto text-amber-200 px-4 py-2 rounded-md bg-fuchsia-900 mt-4 font-heebo transition-colors duration-300 ease-out hover:bg-amber-200 hover:text-fuchsia-900"
+          id="addButton"
         >
           Añadir
         </button>
@@ -94,7 +95,21 @@
           </li>
         </ul>
       </section>
+      <section id="completedTodosListContainer">
+        <h2 class="font-bold my-6">¡Felicidades!, haz terminado esto:</h2>
+        <ul id="completedTodosList"></ul>
+      </section>
     </main>
+    <span
+      class="sr-only bg-amber-200 text-fuchsia-900 hover:bg-fuchsia-100"
+    ></span>
+    <span
+      class="w-full flex flex-col md:flex-row items-center justify-between bg-fuchsia-100 rounded-md p-2 text-amber-200"
+    ></span>
+    <span
+      class="w-full flex flex-col md:flex-row items-center justify-between bg-fuchsia-900 text-fuchsia-200 rounded-md p-2"
+    >
+    </span>
     <footer class="bg-fuchsia-900 p-4">
       <p class="text-center text-amber-200 font-roboto font-bold text-2xl">
         Hecho con ❤️ por
