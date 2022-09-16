@@ -858,6 +858,21 @@ video {
   background-color: rgb(253 230 138 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-fuchsia-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(112 26 117 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-amber-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 243 199 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-fuchsia-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 232 255 / var(--tw-bg-opacity));
+}
+
 .hover\:text-amber-200:hover {
   --tw-text-opacity: 1;
   color: rgb(253 230 138 / var(--tw-text-opacity));
