@@ -6,7 +6,25 @@ const todosList = $('#todoList');
 const completedTodosList = $('#completedTodosList');
 const completedTodosListContainer = $('#completedTodosListContainer');
 const completedTodosTitle = $('#completedTodosTitle');
+const inputTodo = $('#newTask');
 let todosArray = [];
+
+const placeHolders = [
+  'Aprender a programar',
+  'Aprender a cocinar',
+  'Aprender a bailar',
+  'Aprender a tocar un instrumento',
+  'Aprender a hacer un sitio web con JavaScript',
+  'Aprender a hacer un sitio web con React',
+];
+
+inputTodo.placeholder = `${placeHolders.sort(() => Math.random() - 0.5).at(0)}`;
+
+setInterval(() => {
+  inputTodo.placeholder = `${placeHolders
+    .sort(() => Math.random() - 0.5)
+    .at(0)}`;
+}, 3000);
 
 // Functions
 
@@ -33,13 +51,8 @@ const deleteTodo = (todo) => {
 const editTodo = (todo) => {
   const newTodo = prompt('Edita tu tarea', todo);
   todosArray.forEach((item) => {
-    if (newTodo === null || newTodo === '') {
-      return;
-    }
-
-    if (item.todo === todo) {
-      item.todo = newTodo;
-    }
+    if (newTodo === null || newTodo === '') return;
+    if (item.todo === todo) item.todo = newTodo;
   });
   saveTodo();
 };
