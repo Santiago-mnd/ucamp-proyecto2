@@ -21,6 +21,46 @@ const saveTodo = () => {
   printTodos();
 };
 
+const deleteTodo = (todo) => {
+  // let indexArray;
+  // todosArray.forEach((item, index) => {
+  //   if (item.todo === todo) {
+  //     indexArray = index;
+  //   }
+  // });
+  // todosArray.splice(indexArray, 1);
+  // saveTodo();
+
+  todosArray = todosArray.filter((item) => item.todo !== todo);
+  saveTodo();
+};
+
+const editTodo = (todo) => {
+  /*
+    let indexArray = todosArray.findIndex((item) => item.todo === todo);
+    todosArray[indexArray].isCompleted = true;
+    saveTodo();
+  */
+
+  const newTodo = prompt('Edita tu tarea', todo);
+  todosArray.forEach((item) => {
+    if (item.todo === todo) {
+      item.todo = newTodo;
+    }
+  });
+  saveTodo();
+};
+
+const updateTodo = (todo) => {
+  todosArray = todosArray.map((item) => {
+    if (item.todo === todo) {
+      item.isCompleted = !item.isCompleted;
+    }
+    return item;
+  });
+  saveTodo();
+};
+
 const printTodos = () => {
   todosArray = JSON.parse(localStorage.getItem('todos'));
   if (todosArray === null) todosArray = [];
@@ -99,3 +139,7 @@ mainForm.addEventListener('submit', (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', printTodos);
+
+todosList.addEventListener('click', (e) => {
+  e.preventDefault();
+});
