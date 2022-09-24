@@ -1,3 +1,18 @@
+// Clase constructora para los todos.
+class Todo {
+  constructor(todo, isCompleted) {
+    this.todo = todo;
+    this.isCompleted = isCompleted;
+  }
+
+  get showTodo() {
+    return {
+      todo: this.todo,
+      isCompleted: this.isCompleted,
+    };
+  }
+}
+
 // Uso esta función para mayor legibilidad, pero no afecta nada más. =>
 const $ = (selector) => document.querySelector(selector);
 
@@ -29,12 +44,8 @@ setInterval(() => {
 // Functions
 
 const createItem = (actividad) => {
-  const item = {
-    todo: actividad,
-    isCompleted: false,
-  };
-  todosArray.push(item);
-  return item;
+  const item = new Todo(actividad, false);
+  todosArray.push(item.showTodo);
 };
 
 const saveTodo = () => {
